@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="beta_bot_assembly">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000229683334827202 -0.000116600293926683 0.0350560399442884"
+        rpy="0 0 0" />
+      <mass
+        value="0.249244452671213" />
+      <inertia
+        ixx="0.000789839805769934"
+        ixy="3.1312705451733E-07"
+        ixz="6.76332899235619E-08"
+        iyy="0.000789555137090826"
+        iyz="2.67464689564574E-08"
+        izz="0.000845239407928853" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="b_wheel">
+    <inertial>
+      <origin
+        xyz="0.00899805452772122 -3.39824308553949E-08 3.18833477397362E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0374246713415841" />
+      <inertia
+        ixx="5.43138470825955E-06"
+        ixy="-2.48962616784062E-12"
+        ixz="-1.17136747868594E-12"
+        iyy="2.97579360470457E-06"
+        iyz="-4.47809705397328E-12"
+        izz="2.97576544250983E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/b_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/b_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b_joint"
+    type="continuous">
+    <origin
+      xyz="-0.083953 -0.00016226 0.009"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="b_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="r_wheel">
+    <inertial>
+      <origin
+        xyz="-3.68048557464196E-08 0.00899805445933086 -2.77802847115094E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0374246716737644" />
+      <inertia
+        ixx="2.97579416939011E-06"
+        ixy="-2.39730723378969E-12"
+        ixz="1.94192495187255E-12"
+        iyy="5.43138471268656E-06"
+        iyz="1.27824143041439E-12"
+        izz="2.9757648733161E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/r_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/r_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00040521 -0.08371 0.009"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="l_wheel">
+    <inertial>
+      <origin
+        xyz="-4.48432784239117E-08 -0.00899805434096507 1.09624878896764E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0374246742013107" />
+      <inertia
+        ixx="2.97579098358129E-06"
+        ixy="1.69803663049833E-12"
+        ixz="9.358284472778E-12"
+        iyy="5.43138483976901E-06"
+        iyz="2.13244098192846E-12"
+        izz="2.9757681161912E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/l_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/l_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00040521 0.083386 0.009"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="f_wheel">
+    <inertial>
+      <origin
+        xyz="0.158098302945515 -1.19467030018638E-09 -4.637993074319E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0374246733594609" />
+      <inertia
+        ixx="5.4313848299697E-06"
+        ixy="2.52964942002079E-12"
+        ixz="1.10292302598217E-12"
+        iyy="2.97577420232755E-06"
+        iyz="1.3762165003629E-11"
+        izz="2.97578492126078E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/f_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_bot_assembly/meshes/f_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f_joint"
+    type="continuous">
+    <origin
+      xyz="-0.083953 -0.00016226 0.009"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="f_wheel" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>
